@@ -1,3 +1,5 @@
+import random
+
 lines = []
 
 def get_file_lines(filename):
@@ -12,7 +14,7 @@ def lines_printed_backwards(lines_list):
     textfile = open(lines_list)
     lines = textfile.readlines()
     for line in reversed(lines):
-        print(line)
+        print(lines_list.index(line))
     textfile.close()
 
 lines_printed_backwards('/Users/stanleychow/Poetry Slam/poem.txt')
