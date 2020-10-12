@@ -21,20 +21,18 @@ def lines_printed_backwards(lines_list):
 
 lines_printed_backwards('/Users/stanleychow/Poetry Slam/poem.txt')
 
-    
-# lines_printed_backwards('/Users/stanleychow/Poetry Slam/poem.txt')
+def lines_printed_random(lines_list):
+    with open(lines_list) as f:
+        lines = f.readlines()
+        for line in lines_list:
+            print(random.choice(lines))
 
-# def lines_printed_random(lines_list):
-#     for lines in lines_list:
-#         index = random.randint(0, len(lines_list)-1)
-#         print(lines_list[index])
+lines_printed_random('/Users/stanleychow/Poetry Slam/poem.txt')
 
-# lines_printed_random('/Users/stanleychow/Poetry Slam/poem.txt')
+def lines_printed_custom(lines_list):
+    for count, line in enumerate(lines_list, start = 1):
+        if count % 2 == 0:
+            print(line)
 
-# def lines_printed_custom(lines_list):
-#     for count, line in enumerate(lines_list, start = 1):
-#         if count % 2 == 0:
-#             print(line)
-
-# lines_printed_custom('/Users/stanleychow/Poetry Slam/poem.txt')
+lines_printed_custom('/Users/stanleychow/Poetry Slam/poem.txt')
 
