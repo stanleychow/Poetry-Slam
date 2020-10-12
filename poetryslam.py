@@ -26,13 +26,18 @@ def lines_printed_random(lines_list):
         lines = f.readlines()
         for line in lines_list:
             print(random.choice(lines))
+        f.close()
 
 lines_printed_random('/Users/stanleychow/Poetry Slam/poem.txt')
 
 def lines_printed_custom(lines_list):
-    for count, line in enumerate(lines_list, start = 1):
-        if count % 2 == 0:
-            print(line)
-
+    with open(lines_list) as f:
+        lines = f.readlines()
+        count = 0
+        for line in f:
+            count += 1
+            if count % 2 == 0:
+                print(line)
+    f.close()
 lines_printed_custom('/Users/stanleychow/Poetry Slam/poem.txt')
 
