@@ -13,8 +13,11 @@ get_file_lines('/Users/stanleychow/Poetry Slam/poem.txt')
 def lines_printed_backwards(lines_list):
     textfile = open(lines_list)
     lines = textfile.readlines()
+    num_list = [len(lines_list)]
     for line in reversed(lines):
-        print(lines_list.index(line))
+        for num in num_list:
+            print(num)
+        print(line)
     textfile.close()
 
 lines_printed_backwards('/Users/stanleychow/Poetry Slam/poem.txt')
